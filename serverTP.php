@@ -32,7 +32,17 @@ function delete(int $id){
         
     }
     return $products; 
-
+}
+function update(int $id, array $updates){
+    global $products;
+    foreach ($products as $key => $product){
+        if($product['id']==$id){
+            foreach($updates as $key2=>$value){
+                $products [$key][$key2]=$value;
+            }   
+        }
+    }
+    return $products;
 }
 // Création du serveur SOAP
 $options = [
@@ -41,6 +51,6 @@ $options = [
 ];
 // Définition des fonctions dans le serveur
 $server =  new SoapServer(NULL, $options);
-$server->addFunction(['show' , 'specific','add', 'delete']);
+$server->addFunction(['show' , 'specific','add', 'delete','update']);
 // Lancement du serveur 
 $server ->handle();
