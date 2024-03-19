@@ -23,12 +23,15 @@ function add(array $new) {
     $products[] = $new;
     return $products;
 }
-function delete($id){
+function delete(int $id){
     global $products;
-    foreach($products as $product) {
-        unset($product[$id]);
-        return $products;
+    foreach($products as $key => $product) {
+        if($product['id'] == $id){
+            unset($products[ $key ]);
+        }
+        
     }
+    return $products; 
 
 }
 // Création du serveur SOAP
