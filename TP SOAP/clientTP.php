@@ -19,7 +19,7 @@
 // $result = $client -> delete(1);
 $result = $client -> update(1,["marque" => "Product Aa",
 "modele" => "Model Aa",
-"price" => 1000,
+"price" => 10,
 "description" => "Description de Product Aa"]);
 
 // Affichage des résultats
