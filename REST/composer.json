@@ -1,0 +1,16 @@
+{
+    "name": "69vfomt104-06/rest",
+    "autoload": {
+        "psr-4": {
+            "69vfomt10406\\Rest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "manoel"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^6.10"
+    }
+}

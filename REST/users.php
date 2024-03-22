@@ -132,7 +132,11 @@ function delete($id)
             return   $users;
         }
     }
-    return null;
+    http_response_code(404);
+    return [
+        "code" =>  404,
+        "error" => "L'ID de l'utilisateur est introuvable."
+    ];
 }
 //function remplacer user
 function remplace(int $id, array $puts){
